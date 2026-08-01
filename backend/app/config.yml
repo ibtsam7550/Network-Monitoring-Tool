@@ -17,7 +17,6 @@ notifications:
     from: ibtsam@bravian.edu.pk
     to:
     - ibtsam@bravian.edu.pk
-    - ibtsam7550@gmail.com
   webhook:
     enabled: false
     url: https://hooks.slack.com/services/YOUR/WEBHOOK/URL
