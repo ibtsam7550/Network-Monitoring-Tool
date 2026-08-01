@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Playfair Display", serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: "Playfair Display", serif;
+}
+
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #334155;
+  --grad-1: rgba(208, 222, 228, 0.974);
+  --grad-2: rgba(253, 251, 249, 0.97);
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+}
+
+.dark {
+  --bg-color: #0b1120;
+  --text-color: #cbd5e1;
+  --grad-1: rgba(30, 41, 59, 0.55);
+  --grad-2: rgba(49, 46, 90, 0.4);
+  --scrollbar-track: #1e293b;
+  --scrollbar-thumb: #334155;
+  --scrollbar-thumb-hover: #475569;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Playfair Display", serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+
+  /* Subtle, elegant gradients — pastel in light mode, deep glow in dark mode */
+  background-image:
+    radial-gradient(circle at 15% 0%, var(--grad-1), transparent 40%),
+    radial-gradient(circle at 85% 20%, var(--grad-2), transparent 35%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

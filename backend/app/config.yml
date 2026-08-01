@@ -1,0 +1,134 @@
+settings:
+  check_interval: 30
+  timeout: 10
+  retries: 5
+  retry_delay: 5
+  log_file: /app/logs/monitor.log
+  report_file: /app/reports/report.json
+  enable_web_dashboard: true
+  dashboard_port: 8080
+notifications:
+  email:
+    enabled: true
+    smtp_server: smtp.gmail.com
+    smtp_port: 587
+    username: ibtsam@bravian.edu.pk
+    password: your_app_password
+    from: ibtsam@bravian.edu.pk
+    to:
+    - ibtsam@bravian.edu.pk
+    - ibtsam7550@gmail.com
+  webhook:
+    enabled: false
+    url: https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+  console:
+    enabled: true
+targets:
+- name: Sector-A Attendance
+  host: 192.168.5.30
+  port: 80
+  protocol: http
+- name: Sector-B Attendance Senior
+  host: 192.168.1.30
+  port: 80
+  protocol: http
+- name: Sector-B Attendance Junior
+  host: 192.168.1.31
+  port: 80
+  protocol: http
+- name: Sector-C Attendance
+  host: 192.168.2.30
+  port: 80
+  protocol: http
+- name: Sector-F Attendance Senior
+  host: 192.168.4.30
+  port: 80
+  protocol: http
+- name: Sector-F Attendance Junior
+  host: 192.168.4.31
+  port: 80
+  protocol: http
+- name: Sector-O Attendance
+  host: 192.168.3.30
+  port: 80
+  protocol: http
+- name: Zycoo Machine Main
+  host: 192.168.7.1
+  port: 80
+  protocol: http
+- name: Zycoo Machine Child
+  host: 192.168.8.1
+  port: 80
+  protocol: http
+- name: Sector-A (Pre-School) Router
+  host: 192.168.52.1
+  protocol: icmp
+- name: Sector-B Router
+  host: 192.168.56.1
+  protocol: icmp
+- name: 'Sector-B Router # 2'
+  host: 192.168.54.1
+  protocol: icmp
+- name: 'Sector-B Router # 3'
+  host: 192.168.55.1
+  protocol: icmp
+- name: Google
+  host: 8.8.8.8
+  port: 443
+  protocol: https
+- name: Sector-F Router# 1
+  host: 192.168.23.1
+  protocol: icmp
+- name: 'Sector-F Router # 2'
+  host: 192.168.20.1
+  protocol: icmp
+- name: Orchard Router
+  host: 192.168.51.1
+  protocol: icmp
+- name: Meinberg NTP for Windows
+  host: 192.168.4.59
+  port: 123
+  protocol: udp
+- name: NaZeer
+  host: 192.168.7.90
+  protocol: icmp
+- name: Domain Server
+  host: 192.168.1.9
+  port: 5900
+  protocol: tcp
+- name: Sector-C Router
+  host: 192.168.53.1
+  port: 80
+  protocol: icmp
+- name: Endian Router Sector F
+  host: 172.168.21.1
+  protocol: icmp
+- name: IT Side Unifi-F
+  host: 192.168.170.24
+  protocol: icmp
+- name: Admin Side Unifi-F
+  host: 192.168.170.23
+  protocol: icmp
+- name: Store and Accounts Unfi-F
+  host: 192.168.170.43
+  protocol: icmp
+- name: Reception Unifi-B
+  host: 192.168.170.31
+  protocol: icmp
+- name: Auditorium Unifi-F
+  host: 192.168.170.246
+  protocol: icmp
+- name: 1 Floor Coordinator Office Unifi-F
+  host: 1.1.1.1
+  port: 123
+  protocol: http
+- name: Principal Office Ground floor Unifi-F
+  host: 192.168.170.22
+  protocol: icmp
+- name: Reception Master Phone Sector-F
+  host: 192.168.7.200
+  protocol: icmp
+- name: Domain Server ADDS
+  host: 192.168.5.9
+  port: 5900
+  protocol: tcp
