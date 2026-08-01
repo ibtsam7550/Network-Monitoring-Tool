@@ -1,7 +1,5 @@
 # Network Monitor — FastAPI + React
 
-Rebuilt from the original Flask + Jinja app: same monitoring engine (TCP/UDP/HTTP/HTTPS/ICMP checks, retries, uptime history, console/email/webhook alerts), now split into a JSON API and a separate React SPA with a black SaaS-style dashboard.
-
 ## Stack
 - **Backend:** FastAPI (Python 3.12), background thread runs the check loop, same `monitor.py`/`notifier.py`/`reporter.py` logic as before
 - **Frontend:** React 18 + Vite + Tailwind CSS, polls `/api/status` every 10s
